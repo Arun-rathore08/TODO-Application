@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+ <div>
+    <div class="hi p-4">
+        <div class="col-lg-4 shadow mx-auto p-0">
+          <div class="alert-info">
+            <h2>ADD New TODO</h2>
+          </div>
+          <div class="let p-4 ">
+            <form action="/add-todo/" method="POST">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <hr>
+              <input type="submit" value="ADD" class="btn btn-info">
+            </form>
+          </div>
+        </div>
+      </div>
+ </div>
+{% endblock  %}

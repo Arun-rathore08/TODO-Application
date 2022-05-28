@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row p-4">
+  <div class="col-lg-5 shadow mx-auto p-0">
+    <div class="alert-info">
+      <h2 class="let mx-auto">Create Account</h2>
+    </div>
+    <div class="lol p-4 ">
+      <form method="post" action="/signup/" >
+        {% csrf_token %}
+        {{ form.as_ul }}
+        <hr>
+        <input class="btn btn-success" type="submit" value="Create Account">
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
